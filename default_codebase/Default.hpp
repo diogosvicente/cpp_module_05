@@ -28,6 +28,7 @@
 class Default
 {
 	protected:
+		std::string _name;
 
 	public:
 		/* 1 */ Default(void);

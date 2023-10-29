@@ -30,13 +30,39 @@ class Bureaucrat
 {
 	protected:
 		std::string	const _name;
-		int range;
+		int _grade;
 
 	public:
 		/* 1 */ Bureaucrat(void);
 		/* 2 */ Bureaucrat(Bureaucrat const &copy);
 		/* 3 */ Bureaucrat const &operator=(Bureaucrat const &copy);
 		/* 4 */ ~Bureaucrat(void);
+
+		std::string const &getName(void) const;
+		int 		const &getGrade(void)const;
+
+		void incrementGrade(void);
+	    void decrementGrade(void);
+
+		class GradeTooHighException: public std::exception
+		{
+			public:
+				virtual const char *what() const throw()
+				{
+					return "Grade is too high";
+				}
+		};
+
+		class GradeTooLowException: public std::exception
+		{
+			public:
+				virtual const char *what() const throw()
+				{
+					return "Grade is too low";
+				}
+		};
 };
+
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat);
 
 #endif
