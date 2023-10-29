@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Default.cpp                                        :+:      :+:    :+:   */
+/*   Bureaucrat.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,32 +12,32 @@
 
 /**
  *	Orthodox Canonical Form Class
- *	1. A default constructor that initializes the Default-point number value to 0.
+ *	1. A Bureaucrat constructor that initializes the Bureaucrat.
  *	2. A copy constructor.
  *	3. A copy assignment operator overload.
  *	4. A destructor.
  *
  */
 
-Default::Default(void):
+Bureaucrat::Bureaucrat(void):
 {
-	std::cout << RED << "(1)" << RESET " Default constructor called." << std::endl;
+	std::cout << RED << "(1)" << RESET " Bureaucrat constructor called." << std::endl;
 }
 
-Default::Default(Default const &copy)
+Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 {
 	std::cout << RED << "(2)" << RESET << " Copy constructor called." << std::endl;
 	*this = copy;
 }
 
-Default const	&Default::operator=(Default const &copy)
+Bureaucrat const	&Bureaucrat::operator=(Bureaucrat const &copy)
 {
 	std::cout << RED << "(3)" << RESET << " Assignment operator called." << std::endl;
 	Animal::operator=(copy);
 	return (*this);
 }
 
-Default::~Default(void)
+Bureaucrat::~Bureaucrat(void)
 {
 	std::cout << RED << "(4)" RESET " Destructor called." << std::endl; 
 }

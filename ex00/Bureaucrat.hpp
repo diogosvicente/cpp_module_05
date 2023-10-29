@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Default.hpp                                        :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,20 +12,20 @@
 
 /**
  *	Orthodox Canonical Form Class
- *	1. A default constructor that initializes the fixed-point number value to 0.
+ *	1. A Bureaucrat constructor that initializes a Bureaucrat.
  *	2. A copy constructor.
  *	3. A copy assignment operator overload.
  *	4. A destructor.
  *
  */
 
-class Default
+class Bureaucrat
 {
 	protected:
 
 	public:
-		/* 1 */ Default(void);
-		/* 2 */ Default(Default const &copy);
-		/* 3 */ Default const	&operator=(Default const &copy);
-		/* 4 */ ~Default(void);
+		/* 1 */ Bureaucrat(void);
+		/* 2 */ Bureaucrat(Bureaucrat const &copy);
+		/* 3 */ Bureaucrat const	&operator=(Bureaucrat const &copy);
+		/* 4 */ ~Bureaucrat(void);
 };

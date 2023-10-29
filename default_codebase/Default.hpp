@@ -12,7 +12,7 @@
 
 /**
  *	Orthodox Canonical Form Class
- *	1. A default constructor that initializes the fixed-point number value to 0.
+ *	1. A default constructor that initializes a Default.
  *	2. A copy constructor.
  *	3. A copy assignment operator overload.
  *	4. A destructor.
