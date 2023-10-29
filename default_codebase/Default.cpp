@@ -16,10 +16,9 @@
  *	2. A copy constructor.
  *	3. A copy assignment operator overload.
  *	4. A destructor.
- *
  */
 
-Default::Default(void):
+Default::Default(void)
 {
 	std::cout << RED << "(1)" << RESET " Default constructor called." << std::endl;
 }

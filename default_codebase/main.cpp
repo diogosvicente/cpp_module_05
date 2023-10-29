@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Format.hpp"
+#include "Default.hpp"
 
 int main(void)
 {
-	std::cout << RED BOLD ULINE "Hello World" << RESET << std::endl;
+	std::cout << RED BOLD ULINE << "Hello World" << RESET << std::endl;
 	return (0);
 }

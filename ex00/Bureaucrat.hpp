@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
+
+# include <iostream>
+# include "Bureaucrat.hpp"
+# include "Format.hpp"
+
 /**
  *	Orthodox Canonical Form Class
  *	1. A Bureaucrat constructor that initializes a Bureaucrat.
@@ -22,10 +29,14 @@
 class Bureaucrat
 {
 	protected:
+		std::string	const _name;
+		int range;
 
 	public:
 		/* 1 */ Bureaucrat(void);
 		/* 2 */ Bureaucrat(Bureaucrat const &copy);
-		/* 3 */ Bureaucrat const	&operator=(Bureaucrat const &copy);
+		/* 3 */ Bureaucrat const &operator=(Bureaucrat const &copy);
 		/* 4 */ ~Bureaucrat(void);
 };
+
+#endif

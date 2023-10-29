@@ -10,13 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DEFAULT_HPP
+# define DEFAULT_HPP
+
+# include <iostream>
+# include "Default.hpp"
+# include "Format.hpp"
+
 /**
  *	Orthodox Canonical Form Class
  *	1. A default constructor that initializes a Default.
  *	2. A copy constructor.
  *	3. A copy assignment operator overload.
  *	4. A destructor.
- *
  */
 
 class Default
@@ -29,3 +35,5 @@ class Default
 		/* 3 */ Default const	&operator=(Default const &copy);
 		/* 4 */ ~Default(void);
 };
+
+#endif

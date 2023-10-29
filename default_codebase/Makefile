@@ -2,8 +2,8 @@ XX			= c++
 RM			= rm -f
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC			= main.cpp
-NAME		= ex00
+SRC			= main.cpp Default.hpp
+NAME		= program_default
 
 OBJ			= $(SRC:.cpp=.o)
 

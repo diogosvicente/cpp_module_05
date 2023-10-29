@@ -19,7 +19,7 @@
  *
  */
 
-Bureaucrat::Bureaucrat(void):
+Bureaucrat::Bureaucrat(void)
 {
 	std::cout << RED << "(1)" << RESET " Bureaucrat constructor called." << std::endl;
 }
@@ -30,7 +30,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 	*this = copy;
 }
 
-Bureaucrat const	&Bureaucrat::operator=(Bureaucrat const &copy)
+Bureaucrat const &Bureaucrat::operator=(Bureaucrat const &copy)
 {
 	std::cout << RED << "(3)" << RESET << " Assignment operator called." << std::endl;
 	Animal::operator=(copy);
