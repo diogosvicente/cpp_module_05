@@ -6,7 +6,7 @@
 /*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 18:43:35 by dioda-si          #+#    #+#             */
-/*   Updated: 2023/10/29 18:08:20 by dioda-si         ###   ########.fr       */
+/*   Updated: 2023/10/29 22:50:51 by dioda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main(void)
 {
-	Bureaucrat mike("Mike", 0);
+	Bureaucrat b1("Diogo", 100);
+	Bureaucrat b2();
 	return (0);
 }

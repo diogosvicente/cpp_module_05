@@ -13,10 +13,6 @@
 #ifndef DEFAULT_HPP
 # define DEFAULT_HPP
 
-# include <iostream>
-# include "Default.hpp"
-# include "Format.hpp"
-
 /**
  *	Orthodox Canonical Form Class
  *	1. A default constructor that initializes a Default.

@@ -19,14 +19,13 @@
  *	1. A Bureaucrat constructor that initializes the Bureaucrat.
  *	2. A copy constructor.
  *	3. A copy assignment operator overload.
- *	4. A destructor.
- *
+ *	4. A destructor. *
  */
 
-Bureaucrat::Bureaucrat(void)
-{
-	std::cout << RED << "(1)" << RESET " Bureaucrat constructor called." << std::endl;
-}
+// Bureaucrat::Bureaucrat(void)
+// {
+// 	std::cout << RED << "(1)" << RESET " Bureaucrat constructor called." << std::endl;
+// }
 
 Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 {
@@ -34,12 +33,11 @@ Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 	*this = copy;
 }
 
-Bureaucrat const &Bureaucrat::operator=(Bureaucrat const &copy)
+Bureaucrat const &Bureaucrat::operator=(const Bureaucrat &copy)
 {
-	std::cout << RED << "(3)" << RESET << " Assignment operator called." << std::endl;
-	this->_name = copy._name;
-	this->_grade = copy._grade;
-	return (*this);
+    this->_name = copy._name; // Agora você pode atribuir o valor a _name
+    this->_grade = copy._grade;
+    return (*this);
 }
 
 Bureaucrat::~Bureaucrat(void)
@@ -70,14 +68,14 @@ int const	&Bureaucrat::getGrade(void) const
 	return (this->_grade);
 }
 
-void	Bureaucrat::gradeUp(void)
+void	Bureaucrat::incrementGrade(void)
 {
 	this->_grade--;
 	if (this->_grade < 1)
 		throw (Bureaucrat::GradeTooHighException());
 }
 
-void	Bureaucrat::gradeDown(void)
+void	Bureaucrat::decrementGrade(void)
 {
 	this->_grade++;
 	if (this->_grade > 150)
