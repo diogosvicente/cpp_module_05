@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+# include <iostream>
+# include "Bureaucrat.hpp"
+# include "Format.hpp"
+
 /**
  *	Orthodox Canonical Form Class
  *	1. A Bureaucrat constructor that initializes the Bureaucrat.
@@ -44,7 +48,7 @@ Bureaucrat::~Bureaucrat(void)
 }
 
 
-Bureaucrat::Bureaucrat(void): _name("default"), _grade(150) {}
+Bureaucrat::Bureaucrat(void): _name("blank"), _grade(150) {}
 
 Bureaucrat::Bureaucrat(std::string const &name, int grade): _name(name)
 {

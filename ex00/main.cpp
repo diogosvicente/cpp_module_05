@@ -6,7 +6,7 @@
 /*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 18:43:35 by dioda-si          #+#    #+#             */
-/*   Updated: 2023/10/29 12:32:18 by dioda-si         ###   ########.fr       */
+/*   Updated: 2023/10/29 18:08:20 by dioda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int main(void)
 {
-	std::cout << RED BOLD ULINE << "Hello World" << RESET << std::endl;
+	Bureaucrat mike("Mike", 0);
 	return (0);
 }

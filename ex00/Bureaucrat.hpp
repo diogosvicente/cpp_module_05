@@ -13,9 +13,7 @@
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
-# include <iostream>
-# include "Bureaucrat.hpp"
-# include "Format.hpp"
+#include <iostream>
 
 /**
  *	Orthodox Canonical Form Class
@@ -28,7 +26,7 @@
 
 class Bureaucrat
 {
-	protected:
+	private:
 		std::string	const _name;
 		int _grade;
 
@@ -37,6 +35,8 @@ class Bureaucrat
 		/* 2 */ Bureaucrat(Bureaucrat const &copy);
 		/* 3 */ Bureaucrat const &operator=(Bureaucrat const &copy);
 		/* 4 */ ~Bureaucrat(void);
+
+		Bureaucrat(std::string const &name, int grade);
 
 		std::string const &getName(void) const;
 		int 		const &getGrade(void)const;

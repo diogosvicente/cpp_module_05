@@ -27,7 +27,7 @@
 
 class Default
 {
-	protected:
+	private:
 		std::string _name;
 
 	public:
