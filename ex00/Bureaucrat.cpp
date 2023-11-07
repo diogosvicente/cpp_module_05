@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.cpp                                        :+:      :+:    :+:   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 22:37:03 by dioda-si          #+#    #+#             */
-/*   Updated: 2023/10/28 22:37:04 by dioda-si         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:59:34 by dioda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 
 Bureaucrat const &Bureaucrat::operator=(const Bureaucrat &copy)
 {
-    this->_name = copy._name; // Agora você pode atribuir o valor a _name
+    this->_name = copy._name;
     this->_grade = copy._grade;
     return (*this);
 }
