@@ -12,7 +12,7 @@
 
 # include <iostream>
 # include "Bureaucrat.hpp"
-# include "Format.hpp"
+
 
 /**
  *	Orthodox Canonical Form Class
@@ -20,12 +20,16 @@
  *	2. A copy constructor.
  *	3. A copy assignment operator overload.
  *	4. A destructor. *
+ *	5. A Bureaucrat constructor that initializes the Bureaucrat with a name and grade passed by the user.
  */
 
-// Bureaucrat::Bureaucrat(void)
-// {
-// 	std::cout << RED << "(1)" << RESET " Bureaucrat constructor called." << std::endl;
-// }
+Bureaucrat::Bureaucrat(void)//: _name("blank"), _grade(150) {}
+{
+	this->_name = "Blank";
+	this->_grade = 150;
+	std::cout << RED << "(1)" << RESET " Default Bureaucrat constructor called with a default name " \
+	<< GREEN << this->_name << RESET << " and grade "<< GREEN << this->_grade << RESET << std::endl;
+}
 
 Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 {
@@ -42,18 +46,16 @@ Bureaucrat const &Bureaucrat::operator=(const Bureaucrat &copy)
 
 Bureaucrat::~Bureaucrat(void)
 {
-	std::cout << RED << "(4)" RESET " Destructor called." << std::endl; 
+	std::cout << RED << "(4)" RESET " Destructor to " << GREEN << this->_name << RESET << " called." << std::endl; 
 }
-
-
-Bureaucrat::Bureaucrat(void): _name("blank"), _grade(150) {}
 
 Bureaucrat::Bureaucrat(std::string const &name, int grade): _name(name)
 {
+	std::cout << RED << "(5)" RESET " Constructor passing a especific name and grade called." << std::endl; 
 	this->_grade = grade;
-	if (this->_grade < 1)
+	if (this->_grade < this->_highestGrade)
 		throw (Bureaucrat::GradeTooHighException());
-	else if (this->_grade > 150)
+	else if (this->_grade > this->_lowestGrade)
 		throw (Bureaucrat::GradeTooLowException());
 }
 
@@ -71,14 +73,14 @@ int const	&Bureaucrat::getGrade(void) const
 void	Bureaucrat::incrementGrade(void)
 {
 	this->_grade--;
-	if (this->_grade < 1)
+	if (this->_grade < this->_highestGrade)
 		throw (Bureaucrat::GradeTooHighException());
 }
 
 void	Bureaucrat::decrementGrade(void)
 {
 	this->_grade++;
-	if (this->_grade > 150)
+	if (this->_grade > this->_lowestGrade)
 		throw (Bureaucrat::GradeTooLowException());
 }
 

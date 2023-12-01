@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
+# include "Format.hpp"
 
 /**
  *	Orthodox Canonical Form Class
@@ -29,6 +30,8 @@ class Bureaucrat
 	private:
 		std::string	_name;
 		int _grade;
+		static const int _highestGrade = 1;
+    	static const int _lowestGrade = 150;
 
 	public:
 		/* 1 */ Bureaucrat(void);
@@ -36,10 +39,10 @@ class Bureaucrat
 		/* 3 */ Bureaucrat const &operator=(Bureaucrat const &copy);
 		/* 4 */ ~Bureaucrat(void);
 
-		Bureaucrat(std::string const &name, int grade);
+		/* 5 */ Bureaucrat(std::string const &name, int grade);
 
 		std::string const &getName(void) const;
-		int 		const &getGrade(void)const;
+		int 		const &getGrade(void) const;
 
 		void incrementGrade(void);
 	    void decrementGrade(void);
