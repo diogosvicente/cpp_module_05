@@ -1,8 +1,8 @@
-XX			= c++
+CXX			= c++
 RM			= rm -f
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC			= main.cpp
+SRC			= main.cpp Bureaucrat.cpp Form.cpp
 NAME		= ex01
 
 OBJ			= $(SRC:.cpp=.o)

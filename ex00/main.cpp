@@ -75,7 +75,7 @@ int main() {
 
 	std::cout << std::endl << GREEN << "Testing empty constructor" << RESET << std::endl;
 	Bureaucrat empty;
-	std::cout << ULINE << "Testing gettes" << RESET << std::endl;
+	std::cout << ULINE << "Testing gettes in isolation" << RESET << std::endl;
 	std::cout << "getName(): " << RED << empty.getName() << RESET << std::endl;
 	std::cout << "getGrade(): " << RED << empty.getGrade() << RESET << std::endl;
 
