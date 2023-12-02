@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                        :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/28 22:36:42 by dioda-si          #+#    #+#             */
-/*   Updated: 2023/10/28 22:36:59 by dioda-si         ###   ########.fr       */
+/*   Created: 2023/12/02 15:58:53 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/02 15:58:57 by dioda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
-#include <iostream>
+# include <iostream>
+# include "Form.hpp"
 # include "Format.hpp"
+
 
 /**
  *	Orthodox Canonical Form Class
@@ -24,6 +26,8 @@
  *	4. A destructor.
  *
  */
+
+class Form;  // Declarando a classe Form para evitar dependências circulares
 
 class Bureaucrat
 {
@@ -46,6 +50,8 @@ class Bureaucrat
 
 		void incrementGrade(void);
 	    void decrementGrade(void);
+
+		void signForm(Form &form);  // Adicionando o método para assinar um formulário
 
 		class GradeTooHighException: public std::exception
 		{

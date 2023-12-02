@@ -1,8 +1,22 @@
-#ifndef FORM_HPP
-#define FORM_HPP
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/02 15:59:03 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/02 15:59:05 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <iostream>
-#include "Bureaucrat.hpp"
+#ifndef FORM_HPP
+# define FORM_HPP
+
+# include <iostream>
+# include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
 	private:
@@ -36,7 +50,6 @@ class Form {
 		int getExecuteGrade() const;
 
 		void beSigned(const Bureaucrat& bureaucrat);
-		void signForm(const Bureaucrat& bureaucrat);
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& form);

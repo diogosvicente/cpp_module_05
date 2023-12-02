@@ -5,13 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/28 22:26:30 by dioda-si          #+#    #+#             */
-/*   Updated: 2023/10/28 22:29:28 by dioda-si         ###   ########.fr       */
+/*   Created: 2023/12/02 15:59:17 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/02 15:59:20 by dioda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORMAT_HPP
 # define FORMAT_HPP
+
+#include <iostream>
+
+void customPrint(const std::string& text, const std::string& color);
+void brCustomPrint(const std::string& text, const std::string& color);
 
 //FORMAT
 # define RED	"\033[31m"
@@ -25,5 +30,7 @@
 
 //RESET
 # define RESET	"\033[0m"
+
+
 
 #endif
