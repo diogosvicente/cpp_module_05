@@ -1,12 +1,25 @@
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
 
-# include "AForm.hpp"
-
-// representação de uma árvore ASCII
-#ifndef TREE
-# define TREE "          &&& &&  & &&\n      && &\\/&\\|& ()|/ @, &&\n      &\\/(/&/&||/& /_/)_&/_&\n   &() &\\/&|()|/&\\/ '%\" & ()\n  &_\\_&&_\\ |& |&&/&__%_/_& &&\n&&   && & &| &| /& & % ()& /&&\n ()&_---()&\\&\\|&&-&&--%---()~\n     &&     \\|||\n             |||\n             |||\n             |||\n       , -=-~  .-^- _\n"
+# ifndef SHRUBBERY_TREE
+# define SHRUBBERY_TREE \
+"          &&& &&  & &&\n" \
+"      && &\\/&\\|& ()|/ @, &&\n" \
+"      &\\/(/&/&||/& /_/)_&/_&\n" \
+"   &() &\\/&|()|/&\\/ '%\" & ()\n" \
+"  &_\\_&&_\\ |& |&&/&__%_/_& &&\n" \
+"&&   && & &| &| /& & % ()& /&&\n" \
+" ()&_---()&\\&\\|&&-&&--%---()~\n" \
+"     &&     \\|||\n" \
+"             |||\n" \
+"             |||\n" \
+"             |||\n" \
+"       , -=-~  .-^- _\n"
 #endif
+
+
+
+# include "AForm.hpp"
 
 class ShrubberyCreationForm : public AForm {
     private:

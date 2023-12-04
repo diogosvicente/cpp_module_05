@@ -12,6 +12,26 @@ AForm::AForm(void)
     GREEN << this->_signed << RESET << std::endl;
 }
 
+AForm::AForm(AForm const &copy)
+{
+	std::cout << RED << "(2)" << RESET << " Copy constructor called." << std::endl;
+	*this = copy;
+}
+
+AForm const &AForm::operator=(const AForm &copy) //(3)
+{
+	this->_name = copy._name;
+    this->_signGrade = copy._signGrade;
+    this->_execGrade = copy._execGrade;
+	return (*this);
+}
+
+
+AForm::~AForm()
+{
+    std::cout << RED << "(4) AForm destructor" RESET " to " << GREEN << this->_name << RESET << " called." << std::endl; 
+}
+
 AForm::AForm(const std::string& name, int signGrade, int executeGrade)
     //: _name(name), _signed(false), _signGrade(signGrade), _executeGrade(executeGrade)
 {
@@ -29,10 +49,7 @@ AForm::AForm(const std::string& name, int signGrade, int executeGrade)
     GREEN << this->_signed << RESET << std::endl;
 }
 
-AForm::~AForm()
-{
-    std::cout << RED << "(4) AForm destructor" RESET " to " << GREEN << this->_name << RESET << " called." << std::endl; 
-}
+
 
 const std::string& AForm::getName() const
 {
@@ -75,6 +92,10 @@ const char* AForm::GradeTooLowException::what() const throw()
 
 const char *AForm::FormNotSignedException::what() const throw() {
     return ("Form is not signed");
+}
+
+const char *AForm::FileOpenException::what() const throw() {
+    return ("Can't open the file");
 }
 
 std::ostream& operator<<(std::ostream& os, const AForm& form)

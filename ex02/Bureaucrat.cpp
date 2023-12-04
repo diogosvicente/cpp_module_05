@@ -38,7 +38,7 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat::Bureaucrat(std::string const &name, int grade): _name(name)
 {
-	std::cout << RED << "(5) Bureaucrat constructor" RESET "  passing values." << std::endl; 
+	std::cout << RED << "(5) Bureaucrat constructor" << RESET << " passing values." << std::endl; 
 	this->_grade = grade;
 	if (this->_grade < this->_highestGrade)
 		throw (Bureaucrat::GradeTooHighException());
@@ -65,6 +65,20 @@ void Bureaucrat::signForm(AForm &form)
 		std::cout << this->_name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
 	}
 }
+
+void Bureaucrat::executeForm(AForm const &aform)
+{
+    try
+	{
+        aform.execute(*this);
+        std::cout << this->_name << " executed " << aform.getName() << std::endl;
+    }
+	catch (const std::exception &e)
+	{
+        std::cout << this->_name << " couldn't execute " << aform.getName() << " because " << e.what() << std::endl;
+    }
+}
+
 
 void	Bureaucrat::incrementGrade(void)
 {

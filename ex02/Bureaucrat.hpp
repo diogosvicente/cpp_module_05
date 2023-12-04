@@ -43,6 +43,7 @@ class Bureaucrat
 		void incrementGrade(void);
 	    void decrementGrade(void);
 		void signForm(AForm &form);  // Adicionando o método para assinar um formulário
+		void executeForm(AForm const & form); // [subject] Adicionando o método para executar o formulário (criar o arquivo ASCII)
 
 		// Exceptions
 		class GradeTooHighException: public std::exception

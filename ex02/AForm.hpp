@@ -23,7 +23,8 @@ class AForm {
 		~AForm();
 
 		// Others Constructors
-		AForm(const std::string& name, int signGrade, int executeGrade);
+		AForm(const std::string &name, int signGrade, int execGrade);
+		//AForm(const std::string &name, int signGrade, int execGrade); //new constructor
 
 		// getters and setters
 		const std::string& getName() const;
@@ -34,7 +35,6 @@ class AForm {
 		// Methods/Functions
 		void beSigned(const Bureaucrat& bureaucrat);
 	    virtual void execute(const Bureaucrat &executor) const = 0; //criei este método virtual puro (com valor = 0)
-
 
 		// Exceptions
 		class GradeTooHighException : public std::exception
@@ -54,6 +54,12 @@ class AForm {
 			public:
 				virtual const char *what() const throw();
 		};
+
+		class FileOpenException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
+        };
 };
 
 std::ostream& operator<<(std::ostream& os, const AForm& form);

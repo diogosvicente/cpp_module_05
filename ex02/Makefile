@@ -17,6 +17,7 @@ clean:
 
 fclean: clean
 		$(RM) $(NAME)
+		$(RM) -f *_shrubbery
 
 re: fclean $(NAME)
 
