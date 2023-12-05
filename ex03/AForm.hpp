@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 11:04:05 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 11:04:07 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef AFORM_HPP
 # define AFORM_HPP
 
@@ -20,7 +32,7 @@ class AForm {
 		AForm(void);
 		AForm(AForm const &copy);
 		AForm const &operator=(AForm const &copy);
-		~AForm();
+		virtual ~AForm(void);
 
 		// Others Constructors
 		AForm(const std::string &name, int signGrade, int execGrade);

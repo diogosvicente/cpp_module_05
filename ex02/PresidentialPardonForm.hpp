@@ -26,7 +26,7 @@ public:
 	PresidentialPardonForm(void);
 	PresidentialPardonForm(const PresidentialPardonForm &copy);
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &copy);
-	virtual ~PresidentialPardonForm();
+	virtual ~PresidentialPardonForm(void);
 
 	// Main Constructor from subject
 	PresidentialPardonForm(const std::string &target);

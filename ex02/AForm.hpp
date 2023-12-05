@@ -32,7 +32,7 @@ class AForm {
 		AForm(void);
 		AForm(AForm const &copy);
 		AForm const &operator=(AForm const &copy);
-		~AForm();
+		~AForm(void);
 
 		// Others Constructors
 		AForm(const std::string &name, int signGrade, int execGrade);

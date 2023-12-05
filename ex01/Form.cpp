@@ -35,7 +35,7 @@ Form const &Form::operator=(const Form &copy)
 }
 
 // Orthodox Canonical Form - 4
-Form::~Form()
+Form::~Form(void)
 {
     std::cout << RED << "(4) Form destructor" RESET " to " << GREEN << this->_name << RESET << " called." << std::endl; 
 }

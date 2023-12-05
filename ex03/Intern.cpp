@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Intern.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 11:04:15 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 11:04:17 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // Intern.cpp
 
 #include "Intern.hpp"
@@ -12,7 +24,7 @@ Intern &Intern::operator=(const Intern &copy)
     return (*this);
 }
 
-Intern::~Intern() {}
+Intern::~Intern(void) {}
 
 AForm *Intern::makeForm(const std::string &formName, const std::string &target) const
 {

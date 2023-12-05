@@ -44,7 +44,7 @@ class Form {
 		Form(void);
 		Form(Form const &copy);
 		Form const &operator=(Form const &copy);
-		~Form();
+		~Form(void);
 
 		// Others Constructors
 		Form(const std::string& name, int signGrade, int executeGrade);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 11:04:28 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 11:04:30 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ROBOTOMYREQUESTFORM_HPP
 #define ROBOTOMYREQUESTFORM_HPP
 
@@ -15,7 +27,7 @@ class RobotomyRequestForm : public AForm
 		RobotomyRequestForm(void);
 		RobotomyRequestForm(const RobotomyRequestForm &copy);
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &copy);
-		virtual ~RobotomyRequestForm();
+		virtual ~RobotomyRequestForm(void);
 
 		// Other Constructors - main from subject
 		RobotomyRequestForm(const std::string &target);

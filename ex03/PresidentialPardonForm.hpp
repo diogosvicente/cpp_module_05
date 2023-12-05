@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 11:04:23 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 11:04:25 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PRESIDENTIALPARDONFORM_HPP
 #define PRESIDENTIALPARDONFORM_HPP
 
@@ -14,7 +26,7 @@ public:
 	PresidentialPardonForm(void);
 	PresidentialPardonForm(const PresidentialPardonForm &copy);
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &copy);
-	virtual ~PresidentialPardonForm();
+	virtual ~PresidentialPardonForm(void);
 
 	// Main Constructor from subject
 	PresidentialPardonForm(const std::string &target);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 11:04:33 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 11:04:35 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
 
@@ -30,7 +42,7 @@ class ShrubberyCreationForm : public AForm {
 		ShrubberyCreationForm(void);
 		ShrubberyCreationForm(const ShrubberyCreationForm &copy);
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &copy);
-		virtual ~ShrubberyCreationForm(); //são parte da prática de programação defensiva e do uso de polimorfismo.
+		virtual ~ShrubberyCreationForm(void); //são parte da prática de programação defensiva e do uso de polimorfismo.
 		// Permite a liberação adequada de recursos quando um objeto derivado é deletado através de um ponteiro para a classe base.
 
 		// Others Constructors: Todos eles levam apenas um parâmetro em seu construtor: o alvo do formulário.

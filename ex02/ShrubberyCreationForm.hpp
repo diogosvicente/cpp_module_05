@@ -42,7 +42,7 @@ class ShrubberyCreationForm : public AForm {
 		ShrubberyCreationForm(void);
 		ShrubberyCreationForm(const ShrubberyCreationForm &copy);
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &copy);
-		virtual ~ShrubberyCreationForm(); //são parte da prática de programação defensiva e do uso de polimorfismo.
+		virtual ~ShrubberyCreationForm(void); //são parte da prática de programação defensiva e do uso de polimorfismo.
 		// Permite a liberação adequada de recursos quando um objeto derivado é deletado através de um ponteiro para a classe base.
 
 		// Others Constructors: Todos eles levam apenas um parâmetro em seu construtor: o alvo do formulário.

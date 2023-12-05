@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 11:04:17 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 11:04:19 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef INTERN_HPP
 #define INTERN_HPP
 
@@ -15,7 +27,7 @@ class Intern
 		Intern(void);
 		Intern(const Intern &copy);
 		Intern &operator=(const Intern &copy);
-		~Intern();
+		~Intern(void);
 
 		// Methods required from subject
 		AForm *makeForm(const std::string &formName, const std::string &target) const;
