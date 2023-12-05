@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 00:34:48 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 00:34:49 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include <iostream>
 # include "Bureaucrat.hpp"
 
@@ -68,15 +80,15 @@ void Bureaucrat::signForm(AForm &form)
 
 void Bureaucrat::executeForm(AForm const &aform)
 {
-    try
+	try
 	{
-        aform.execute(*this);
-        std::cout << this->_name << " executed " << aform.getName() << std::endl;
-    }
+		aform.execute(*this);
+		std::cout << this->_name << " executed " << aform.getName() << std::endl;
+	}
 	catch (const std::exception &e)
 	{
-        std::cout << this->_name << " couldn't execute " << aform.getName() << " because " << e.what() << std::endl;
-    }
+		std::cout << this->_name << " couldn't execute " << aform.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 

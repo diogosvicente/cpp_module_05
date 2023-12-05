@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 00:34:56 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 00:34:57 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
 # include <iostream>
 # include "AForm.hpp"
 # include "Utils.hpp"
-
 
 /**
  *	Orthodox Canonical Form Class

@@ -1,7 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dioda-si <dioda-si@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/05 00:35:10 by dioda-si          #+#    #+#             */
+/*   Updated: 2023/12/05 00:35:12 by dioda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ROBOTOMYREQUESTFORM_HPP
 #define ROBOTOMYREQUESTFORM_HPP
 
 #include "AForm.hpp"
+
+class Bureaucrat;
 
 class RobotomyRequestForm : public AForm
 {
