@@ -12,16 +12,7 @@
 
 #include "Form.hpp"
 
-const char* Form::GradeTooHighException::what() const throw()
-{
-    return "Grade is too high";
-}
-
-const char* Form::GradeTooLowException::what() const throw()
-{
-    return "Grade is too low";
-}
-
+// Orthodox Canonical Form - 1
 Form::Form(void)
 {
     this->_name = "Blank";
@@ -34,6 +25,22 @@ Form::Form(void)
     GREEN << this->_signed << RESET << std::endl;
 }
 
+// Orthodox Canonical Form - 3
+Form const &Form::operator=(const Form &copy)
+{
+	this->_name = copy._name;
+    this->_signGrade = copy._signGrade;
+    this->_execGrade = copy._execGrade;
+	return (*this);
+}
+
+// Orthodox Canonical Form - 4
+Form::~Form()
+{
+    std::cout << RED << "(4) Form destructor" RESET " to " << GREEN << this->_name << RESET << " called." << std::endl; 
+}
+
+// Other Constructors
 Form::Form(const std::string& name, int signGrade, int executeGrade)
     //: _name(name), _signed(false), _signGrade(signGrade), _executeGrade(executeGrade)
 {
@@ -51,11 +58,7 @@ Form::Form(const std::string& name, int signGrade, int executeGrade)
     GREEN << this->_signed << RESET << std::endl;
 }
 
-Form::~Form()
-{
-    std::cout << RED << "(4) Form destructor" RESET " to " << GREEN << this->_name << RESET << " called." << std::endl; 
-}
-
+// getter and setters
 const std::string& Form::getName() const
 {
     return _name;
@@ -76,6 +79,7 @@ int Form::getExecuteGrade() const
     return this->_execGrade;
 }
 
+// Other Methods
 void Form::beSigned(const Bureaucrat& bureaucrat)
 {
     if (bureaucrat.getGrade() <= this->_signGrade) {
@@ -83,6 +87,18 @@ void Form::beSigned(const Bureaucrat& bureaucrat)
     } else {
         throw Form::GradeTooLowException();
     }
+}
+
+// Exceptions
+const char* Form::GradeTooHighException::what() const throw()
+{
+    return "Grade is too high";
+}
+
+// Operator Overload
+const char* Form::GradeTooLowException::what() const throw()
+{
+    return "Grade is too low";
 }
 
 std::ostream& operator<<(std::ostream& os, const Form& form)

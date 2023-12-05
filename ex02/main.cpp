@@ -5,15 +5,15 @@
 
 int main()
 {
-    Bureaucrat diogo("Diogo", 1);
-    ShrubberyCreationForm shrubbery("Test");
+    Bureaucrat diogo("Diogo", 137);
+    ShrubberyCreationForm uerj("UERJ");
 
     try
     {
-        std::cout << shrubbery << std::endl;
-        diogo.signForm(shrubbery);
-        diogo.executeForm(shrubbery);
-        std::cout << shrubbery << std::endl;
+        std::cout << uerj << std::endl;
+        diogo.signForm(uerj);
+        diogo.executeForm(uerj);
+        std::cout << uerj << std::endl;
     }
     catch (std::exception &e)
     {

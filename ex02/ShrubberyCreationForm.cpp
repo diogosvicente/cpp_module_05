@@ -23,14 +23,13 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 // Orthodox Canonical Form Class - 4.
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-    std::cout << RED << "(4) ShrubberyCreationForm Destructor " << RESET << "called." << std::endl;;
+    std::cout << RED << "(4) ShrubberyCreationForm Destructor to " << RESET << "called." << std::endl;;
 }
 
 // Other Constructors - Main Constructor from subject
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : AForm(target, 145, 137), _target(target)
 {
-    std::cout << RED << "(5) ShrubberyCreationForm Construtor" << RESET << " passing values \
-    called. Named: " << GREEN << target << RESET << std::endl;;
+    std::cout << RED << "(5) ShrubberyCreationForm Main Construtor" << RESET << " called, named: " << GREEN << target << RESET << std::endl;;
 }
 
 // Methods - required from subject

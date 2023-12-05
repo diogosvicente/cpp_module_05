@@ -40,15 +40,22 @@ class Form {
 				virtual const char* what() const throw();
 		};
 
+		// Orthodox Canonical Form
 		Form(void);
-		Form(const std::string& name, int signGrade, int executeGrade);
+		Form(Form const &copy);
+		Form const &operator=(Form const &copy);
 		~Form();
 
+		// Others Constructors
+		Form(const std::string& name, int signGrade, int executeGrade);
+
+		// getters and setters
 		const std::string& getName() const;
 		bool isSigned() const;
 		int getSignGrade() const;
 		int getExecuteGrade() const;
 
+		// Methods/Functions
 		void beSigned(const Bureaucrat& bureaucrat);
 };
 

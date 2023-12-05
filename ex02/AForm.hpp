@@ -24,7 +24,7 @@ class AForm {
 
 		// Others Constructors
 		AForm(const std::string &name, int signGrade, int execGrade);
-		//AForm(const std::string &name, int signGrade, int execGrade); //new constructor
+		//AForm(const std::string &name, int signGrade, int execGrade);
 
 		// getters and setters
 		const std::string& getName() const;

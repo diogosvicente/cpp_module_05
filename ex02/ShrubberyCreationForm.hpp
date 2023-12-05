@@ -26,7 +26,7 @@ class ShrubberyCreationForm : public AForm {
         std::string	_target;
 
     public:
-        // Orthodox Canonical AForm        
+        // Orthodox Canonical Form        
         ShrubberyCreationForm(void);
         ShrubberyCreationForm(const ShrubberyCreationForm &copy);
         ShrubberyCreationForm &operator=(const ShrubberyCreationForm &copy);
