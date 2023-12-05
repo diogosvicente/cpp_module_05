@@ -13,24 +13,25 @@
 #include "Form.hpp"
 
 // Orthodox Canonical Form - 1
-Form::Form(void)
-{
-    this->_name = "Blank";
+Form::Form(void) : _name("Blank"), _signed(false), _signGrade(30), _execGrade(60)
+{    
     this->_signed = false;
-    this->_signGrade = 30;
-    this->_execGrade = 60;
 	std::cout << RED << "(1) Form default constructor" << RESET " name: " \
 	<< GREEN << this->_name << RESET << ", signGrade: "<< GREEN << this->_signGrade << RESET \
     ", execGrade: " << GREEN << this->_execGrade << RESET << ", signed: " \
     GREEN << this->_signed << RESET << std::endl;
 }
 
+Form::Form(Form const &copy)
+{
+	std::cout << RED << "(2)" << RESET << " Copy constructor called." << std::endl;
+	*this = copy;
+}
+
 // Orthodox Canonical Form - 3
 Form const &Form::operator=(const Form &copy)
 {
-	this->_name = copy._name;
-    this->_signGrade = copy._signGrade;
-    this->_execGrade = copy._execGrade;
+    this->_signed = copy._signed;
 	return (*this);
 }
 
@@ -42,12 +43,8 @@ Form::~Form(void)
 
 // Other Constructors
 Form::Form(const std::string& name, int signGrade, int executeGrade)
-    //: _name(name), _signed(false), _signGrade(signGrade), _executeGrade(executeGrade)
+    : _name(name), _signed(false), _signGrade(signGrade), _execGrade(executeGrade)
 {
-    this->_name = name;
-    this->_signed = false;
-    this->_signGrade = signGrade;
-    this->_execGrade = executeGrade;
     if (this->_signGrade < this->_highestGrade || this->_execGrade < this->_highestGrade)
         throw Form::GradeTooHighException();
     else if (this->_signGrade > this->_lowestGrade || this->_execGrade > this->_lowestGrade)

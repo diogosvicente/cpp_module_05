@@ -23,9 +23,9 @@
  *	5. A Bureaucrat constructor that initializes the Bureaucrat with a name and grade passed by the user.
  */
 
-Bureaucrat::Bureaucrat(void)//: _name("blank"), _grade(150) {}
+Bureaucrat::Bureaucrat(void): _name("blank")//, _grade(150) {}
 {
-	this->_name = "Blank";
+	//this->_name = "Blank";
 	this->_grade = 150;
 	std::cout << RED << "(1)" << RESET " Default Bureaucrat constructor called with a default name " \
 	<< GREEN << this->_name << RESET << " and grade "<< GREEN << this->_grade << RESET << std::endl;
@@ -39,7 +39,6 @@ Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 
 Bureaucrat const &Bureaucrat::operator=(const Bureaucrat &copy) // 3
 {
-    this->_name = copy._name;
     this->_grade = copy._grade;
     return (*this);
 }

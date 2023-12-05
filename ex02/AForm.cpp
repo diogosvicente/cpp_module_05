@@ -13,7 +13,7 @@
 #include "AForm.hpp"
 
 // Orthodox Canonical Form - 1
-AForm::AForm(void)
+AForm::AForm(void) :  _name("Blank"), _signed(false), _signGrade(30), _execGrade(60)
 {
 	this->_name = "Blank";
 	this->_signed = false;
@@ -42,19 +42,15 @@ AForm const &AForm::operator=(const AForm &copy)
 }
 
 // Orthodox Canonical Form - 4
-AForm::~AForm()
+AForm::~AForm(void)
 {
 	std::cout << RED << "(4) AForm destructor" RESET " to " << GREEN << this->_name << RESET << " called." << std::endl; 
 }
 
 // Other Constructors
 AForm::AForm(const std::string& name, int signGrade, int executeGrade)
-	//: _name(name), _signed(false), _signGrade(signGrade), _executeGrade(executeGrade)
+	: _name(name), _signed(false), _signGrade(signGrade), _execGrade(executeGrade)
 {
-	this->_name = name;
-	this->_signed = false;
-	this->_signGrade = signGrade;
-	this->_execGrade = executeGrade;
 	if (this->_signGrade < this->_highestGrade || this->_execGrade < this->_highestGrade)
 		throw AForm::GradeTooHighException();
 	else if (this->_signGrade > this->_lowestGrade || this->_execGrade > this->_lowestGrade)

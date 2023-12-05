@@ -31,7 +31,7 @@ class AForm;  // Declarando a classe Form para evitar dependências circulares
 class Bureaucrat
 {
 	private:
-		std::string	_name;
+		std::string const	_name;
 		int _grade;
 		static const int _highestGrade = 1;
     	static const int _lowestGrade = 150;

@@ -22,15 +22,14 @@
  *	5. A Bureaucrat constructor that initializes some Bureaucrat's values.
  */
 
-Bureaucrat::Bureaucrat(void)//: _name("blank"), _grade(150) {}
+Bureaucrat::Bureaucrat(void): _name("blank") // (1)
 {
-	this->_name = "Blank";
 	this->_grade = 150;
 	std::cout << RED << "(1) Default bureaucrat constructor" << RESET " called with a default name " \
 	<< GREEN << this->_name << RESET << " and grade "<< GREEN << this->_grade << RESET << std::endl;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &copy)
+Bureaucrat::Bureaucrat(Bureaucrat const &copy) // (2)
 {
 	std::cout << RED << "(2)" << RESET << " Copy constructor called." << std::endl;
 	*this = copy;
@@ -38,17 +37,16 @@ Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 
 Bureaucrat const &Bureaucrat::operator=(const Bureaucrat &copy) //(3)
 {
-	this->_name = copy._name;
 	this->_grade = copy._grade;
 	return (*this);
 }
 
-Bureaucrat::~Bureaucrat(void)
+Bureaucrat::~Bureaucrat(void) // (4)
 {
 	std::cout << RED << "(4) Bureaucrat destructor" << RESET " to " << GREEN << this->_name << RESET << " called." << std::endl; 
 }
 
-Bureaucrat::Bureaucrat(std::string const &name, int grade): _name(name)
+Bureaucrat::Bureaucrat(std::string const &name, int grade): _name(name) // (5)
 {
 	std::cout << RED << "(5) Bureaucrat constructor" RESET "  passing values." << std::endl; 
 	this->_grade = grade;

@@ -20,10 +20,10 @@ class Bureaucrat;
 
 class AForm {
 	private:
-		std::string _name;
+		std::string const _name;
 		bool _signed;
-		int _signGrade;
-		int _execGrade;
+		int const _signGrade;
+		int const _execGrade;
 		static const int _highestGrade = 1;
 		static const int _lowestGrade = 150;
 
