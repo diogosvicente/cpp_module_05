@@ -2,7 +2,7 @@ CXX			= c++
 RM			= rm -f
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC			= main.cpp Bureaucrat.cpp AForm.cpp Format.cpp ShrubberyCreationForm.cpp
+SRC			= main.cpp Utils.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 NAME		= ex02
 
 OBJ			= $(SRC:.cpp=.o)

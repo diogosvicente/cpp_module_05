@@ -1,10 +1,15 @@
-#ifndef FORMAT_HPP
-# define FORMAT_HPP
+#ifndef UTILS_HPP
+# define UTILS_HPP
 
 #include <iostream>
+#include <cstdlib> // Para rand
+#include <ctime>   // Para time
 
 void customPrint(const std::string& text, const std::string& color);
 void brCustomPrint(const std::string& text, const std::string& color);
+int getRandomNumber(void);
+int isOdd(int number);
+int generateRandomEvenOrOdd();
 
 //FORMAT
 # define RED	"\033[31m"

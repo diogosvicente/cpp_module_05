@@ -2,7 +2,7 @@
 #include <fstream>
 
 // Orthodox Canonical Form Class - 1.
-ShrubberyCreationForm::ShrubberyCreationForm(void) : AForm("defaultTarget", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(void) : AForm("defaultTarget", 145, 137), _target("defaultTarget")
 {
     std::cout << RED << "(1) ShrubberyCreationForm Default Construtor" << RESET << \
     "called. Named: " << GREEN << "defaultTarget" << RESET << std::endl;;
@@ -45,7 +45,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
         throw AForm::GradeTooLowException();
     }
 
-    std::ofstream outFile((getName() + "_shrubbery").c_str());  // Convertendo explicitamente para const char*
+    std::ofstream outFile((this->_target + "_shrubbery").c_str());  // Convertendo explicitamente para const char*
     if (outFile.is_open())
     {
         outFile << SHRUBBERY_TREE;
